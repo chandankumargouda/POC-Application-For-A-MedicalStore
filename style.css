@@ -1,11 +1,10 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
 body {
   font-family: Arial, sans-serif;
   background: #f4f6f8;
@@ -13,7 +12,6 @@ body {
   padding: 20px;
 }
 
-/* Headings */
 h1 {
   margin-bottom: 20px;
   color: #333;
@@ -29,7 +27,6 @@ h3 {
   color: #555;
 }
 
-/* Buttons */
 button {
   padding: 8px 15px;
   margin: 5px;
@@ -45,7 +42,6 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Input fields */
 input {
   padding: 8px;
   margin: 5px;
@@ -53,7 +49,6 @@ input {
   border-radius: 5px;
 }
 
-/* Table */
 table {
   margin: 20px auto;
   border-collapse: collapse;
@@ -73,33 +68,12 @@ td {
   border-bottom: 1px solid #ddd;
 }
 
-/* Hover effect */
 tr:hover {
   background-color: #f1f1f1;
 }
 
-/* Card-like container */
-#medicineList, #salesList {
-  background: white;
-  padding: 15px;
-  margin: 15px auto;
-  width: 60%;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
 
-/* Paragraph spacing */
+
 p {
   margin: 8px 0;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  table {
-    width: 100%;
-  }
-
-  #medicineList, #salesList {
-    width: 90%;
-  }
 }
