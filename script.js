@@ -1,4 +1,3 @@
-// -------------------- STORAGE --------------------
 function getMedicines() {
   return JSON.parse(localStorage.getItem("medicines")) || [];
 }
@@ -7,9 +6,7 @@ function saveMedicines(data) {
   localStorage.setItem("medicines", JSON.stringify(data));
 }
 
-// -------------------- ADMIN --------------------
 
-// Add Medicine
 function addMedicine() {
   let name = document.getElementById("name").value;
   let price = document.getElementById("price").value;
@@ -27,7 +24,6 @@ function addMedicine() {
   displayMedicines();
 }
 
-// Display Medicines (Admin)
 function displayMedicines() {
   let table = document.getElementById("medicineTable");
   if (!table) return;
@@ -62,7 +58,6 @@ function displayMedicines() {
   });
 }
 
-// Edit Medicine (GST + Discount)
 function editMedicine(index) {
   let medicines = getMedicines();
 
@@ -76,7 +71,6 @@ function editMedicine(index) {
   displayMedicines();
 }
 
-// Delete Medicine
 function deleteMedicine(index) {
   let medicines = getMedicines();
   medicines.splice(index, 1);
@@ -84,7 +78,6 @@ function deleteMedicine(index) {
   displayMedicines();
 }
 
-// Remove Expired Medicines
 function removeExpired() {
   let medicines = getMedicines();
   let today = new Date().toISOString().split("T")[0];
@@ -93,9 +86,7 @@ function removeExpired() {
   saveMedicines(medicines);
 }
 
-// -------------------- OPERATOR --------------------
 
-// Display Medicines (Operator)
 function displayOperator() {
   let div = document.getElementById("medicineList");
   if (!div) return;
@@ -118,7 +109,6 @@ function displayOperator() {
   });
 }
 
-// Add Sale
 function addSale(name) {
   let qty = prompt("Enter quantity:");
   if (!qty) return;
@@ -142,7 +132,6 @@ function addSale(name) {
   displaySales();
 }
 
-// Display Sales (Reports)
 function displaySales() {
   let div = document.getElementById("salesList");
   if (!div) return;
@@ -171,7 +160,6 @@ function displaySales() {
   `;
 }
 
-// -------------------- AUTO LOAD --------------------
 removeExpired();
 
 window.onload = function () {
